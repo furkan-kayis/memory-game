@@ -1,0 +1,36 @@
+#root {
+  display: flex;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  width: 7em;
+  height: 9.5em;
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  user-select: none;
+  float: left;
+}
+
+.span {
+  position: absolute;
+  backface-visibility: hidden;
+  left: 0;
+  width: 100%;
+}
+
+@media (max-width: 50em) {
+  .card {
+    width: 5em;
+    height: 7.5em;
+  }
+}
